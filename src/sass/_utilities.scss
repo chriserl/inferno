@@ -1,5 +1,5 @@
 //Flexbox
-@mixin flex($direction: null, $align: null, $justify: null) {
+@mixin flex($direction: row, $align: center, $justify: null) {
   display: flex;
   flex-direction: $direction;
   align-items: $align;
@@ -8,6 +8,7 @@
 
 //Grid
 @mixin grid($align: null, $justify: null) {
+  display: grid;
   align-items: $align;
   justify-content: $justify;
 }
@@ -52,7 +53,7 @@
 }
 
 @mixin plb {
-  font-size: 1rem;
+  @include pl;
   font-family: MulishMedium;
 }
 
@@ -61,7 +62,8 @@
 }
 
 @mixin psb {
-  font-size: 0.88rem;
+  @include ps;
+  font-family: MulishMedium;
 }
 
 @mixin px {
@@ -69,7 +71,8 @@
 }
 
 @mixin pxb {
-  font-size: 0.8rem;
+  @include px;
+  font-family: MulishMedium;
 }
 
 //Buttons

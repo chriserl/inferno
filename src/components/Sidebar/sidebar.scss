@@ -8,21 +8,29 @@
   left: 0;
   top: 0;
   background: hsl(100, 0, 97);
-  padding: $space-4 $space-2 0 $space-3;
+  padding: $space-2 $space-2 0 $space-3;
   @include flex(column, stretch);
+  overflow-y: scroll;
+  @include scroll-hide;
 
   .hide-sidebar {
     width: max-content;
     align-self: flex-end;
   }
 
+  hr {
+    opacity: 0.4;
+    width: 80%;
+    margin: $space-4 auto;
+  }
+
   .profile {
     width: max-content;
     margin: $space-2 auto 0;
-    @include flex(column, stretch, center);
+    @include flex(column, center);
 
     .profile-image {
-      width: 6rem;
+      width: 5.6rem;
       border-radius: 50%;
       margin-bottom: $space-3;
     }
@@ -31,5 +39,50 @@
       @include plb;
       color: hsl(100, 0, 20);
     }
+  }
+
+  .view-links {
+    width: 64%;
+    margin: 0 auto;
+
+    .link-item {
+      margin-bottom: $space-2;
+
+      .view-link {
+        @include flex(row, center);
+
+        .link-icon {
+          margin-right: $space-1;
+          color: hsl(100, 0, 10);
+        }
+
+        .link-text {
+          @include psb;
+          color: hsl(100, 0, 40);
+        }
+      }
+    }
+  }
+
+  .subscriptions {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: $space-8;
+    @include grid($justify: space-between);
+    grid-template-columns: repeat(auto-fit, minmax(2.4rem, 1fr));
+    grid-gap: $space-2;
+
+    .channel-image-container {
+      width: 100%;
+
+      .channel-image {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .utility-links {
+    margin-top: $space-8;
   }
 }

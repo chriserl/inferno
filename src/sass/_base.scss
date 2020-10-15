@@ -24,6 +24,11 @@ li {
   list-style-type: none;
 }
 
+//Reset links
+a {
+  text-decoration: none;
+}
+
 //Root font family
 body {
   font-family: Mulish, Arial, Helvetica, sans-serif;
@@ -37,7 +42,7 @@ body {
 
 @font-face {
   font-family: MulishMedium;
-  src: url(../assets/fonts/mulish/Mulish-Medium.ttf);
+  src: url(../assets/fonts/mulish/Mulish-SemiBold.ttf);
 }
 
 @font-face {
