@@ -1,0 +1,76 @@
+//Flexbox
+@mixin flex($direction: null, $align: null, $justify: null) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+//Grid
+@mixin grid($align: null, $justify: null) {
+  align-items: $align;
+  justify-content: $justify;
+}
+
+//Media Queries
+
+//Big Smartphone devices
+@mixin phone-lg {
+  @media screen and (min-width: 414px) {
+    @content;
+  }
+}
+
+//Tablet devices
+@mixin tab-screen {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+//Small screen laptops
+@mixin laptop-small {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+//Large screen laptops
+@mixin laptop-large {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+//Text
+.eighteen-px {
+  font-size: 1.16rem;
+}
+
+.sixteen-px {
+  font-size: 1rem;
+}
+
+.fourteen-px {
+  font-size: 0.88rem;
+}
+
+.thirteen-px {
+  font-size: 0.8 rem;
+}
+
+//Hide Scrollbar
+@mixin scroll-hide {
+  scrollbar-width: none;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+//Display none
+@mixin d-none {
+  display: none;
+}

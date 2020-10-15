@@ -1,0 +1,20 @@
+//Simple Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//Root font size
+:root {
+  font-size: calc(14px + 0.72vw);
+
+  @media screen and (min-width: 600px) {
+    font-size: calc(14px + 0.18vw);
+  }
+}
+
+//Root font family
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
