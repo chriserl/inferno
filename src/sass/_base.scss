@@ -19,6 +19,11 @@
   text-decoration: none;
 }
 
+//Remove bullet from li
+li {
+  list-style-type: none;
+}
+
 //Root font family
 body {
   font-family: Mulish, Arial, Helvetica, sans-serif;

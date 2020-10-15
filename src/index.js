@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
 import App from "./pages/app";
 import "./sass/main.scss";
@@ -7,7 +8,9 @@ import "line-awesome/dist/line-awesome/css/line-awesome.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Route exact path="/" component={App}></Route>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );

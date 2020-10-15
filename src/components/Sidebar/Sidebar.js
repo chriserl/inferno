@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./sidebar.scss";
 import profileImage from "../../assets/images/jade.jpg";
 
@@ -15,22 +16,34 @@ const Sidebar = () => {
       <div className="view-links">
         <ul className="links">
           <li className="link-item">
-            <a href="/" className="view-link">
+            <NavLink
+              to="/"
+              className="view-link"
+              activeClassName="active-view-link"
+            >
               <span className="las la-home"></span>
               Home
-            </a>
+            </NavLink>
           </li>
           <li className="link-item">
-            <a href="/" className="view-link">
+            <NavLink
+              to="/"
+              className="view-link"
+              activeClassName="active-view-link"
+            >
               <span className="las la-home"></span>
               Home
-            </a>
+            </NavLink>
           </li>
           <li className="link-item">
-            <a href="/" className="view-link">
+            <NavLink
+              to="/"
+              className="view-link"
+              activeClassName="active-view-link"
+            >
               <span className="las la-home"></span>
               Home
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>

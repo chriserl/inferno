@@ -18,7 +18,7 @@
 
   .profile {
     width: max-content;
-    margin: $space-8 auto 0;
+    margin: $space-2 auto 0;
     @include flex(column, stretch, center);
 
     .profile-image {
