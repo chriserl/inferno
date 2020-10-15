@@ -1,7 +1,11 @@
 @import "../../sass/variables";
 @import "../../sass/utilities";
 
-.sidebar {
+.sidebar-closed {
+  display: none;
+}
+
+.sidebar-opened {
   height: 100vh;
   width: 14rem;
   position: fixed;
@@ -62,6 +66,10 @@
         }
       }
     }
+  }
+
+  .app-links {
+    margin-top: $space-6;
   }
 
   .subscriptions {
