@@ -1,0 +1,17 @@
+//Icons
+.icon-regular {
+  font-size: 1.2rem;
+}
+
+//Buttons
+.icon-font-button {
+  @extend .button;
+  @extend .icon-regular;
+  color: hsl(100, 0, 10);
+  background-color: hsl(100, 100, 100);
+  transition: all 0.25s ease;
+
+  &:hover {
+    box-shadow: 2px 8px 18px hsl(100, 0, 88);
+  }
+}

@@ -14,6 +14,11 @@
   }
 }
 
+//Remove underline from links
+[href] {
+  text-decoration: none;
+}
+
 //Root font family
 body {
   font-family: Mulish, Arial, Helvetica, sans-serif;
@@ -22,7 +27,17 @@ body {
 //Fonts
 @font-face {
   font-family: Mulish;
-  src: url(../assets/fonts/mulish/Mulish-VariableFont_wght.ttf);
+  src: url(../assets/fonts/mulish/Mulish-Regular.ttf);
+}
+
+@font-face {
+  font-family: MulishMedium;
+  src: url(../assets/fonts/mulish/Mulish-Medium.ttf);
+}
+
+@font-face {
+  font-family: MulishBold;
+  src: url(../assets/fonts/mulish/Mulish-Bold.ttf);
 }
 
 //Iconfont
@@ -34,7 +49,6 @@ body {
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
-  font-size: 1rem;
 
   //Support for all webkit browsers
   -webkit-font-smoothing: antialiased;

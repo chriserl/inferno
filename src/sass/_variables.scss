@@ -1,3 +1,18 @@
 $base-fontSize: 1rem; //Base font size
 
+//Spacing
 $base-spaceSize: calc(1rem + 0.8px); //Base space size
+$space-1: calc(#{$base-fontSize} * 0.4);
+$space-2: calc(#{$base-fontSize} * 0.8);
+$space-3: calc(#{$base-fontSize} * 1.2);
+$space-4: calc(#{$base-fontSize} * 1.6);
+$space-5: calc(#{$base-fontSize} * 2);
+$space-6: calc(#{$base-fontSize} * 2.4);
+$space-7: calc(#{$base-fontSize} * 2.8);
+$space-8: calc(#{$base-fontSize} * 3.2);
+$space-9: calc(#{$base-fontSize} * 3.6);
+$space-10: calc(#{$base-fontSize} * 4);
+$space-11: calc(#{$base-fontSize} * 4.4);
+$space-12: calc(#{$base-fontSize} * 4.8);
+$space-13: calc(#{$base-fontSize} * 5.2);
+$space-14: calc(#{$base-fontSize} * 5.6);

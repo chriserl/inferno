@@ -43,20 +43,41 @@
 }
 
 //Text
-.eighteen-px {
+@mixin ph {
   font-size: 1.16rem;
 }
 
-.sixteen-px {
+@mixin pl {
   font-size: 1rem;
 }
 
-.fourteen-px {
+@mixin plb {
+  font-size: 1rem;
+  font-family: MulishMedium;
+}
+
+@mixin ps {
   font-size: 0.88rem;
 }
 
-.thirteen-px {
+@mixin psb {
+  font-size: 0.88rem;
+}
+
+@mixin px {
   font-size: 0.8 rem;
+}
+
+@mixin pxb {
+  font-size: 0.8rem;
+}
+
+//Buttons
+.button {
+  border: none;
+  background: transparent;
+  padding: $space-1;
+  border-radius: $space-1;
 }
 
 //Hide Scrollbar
