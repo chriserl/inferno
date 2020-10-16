@@ -63,6 +63,26 @@ const VideoGrid = () => {
             <p className="views">1.2k views</p>
           </div>
         </li>
+        <li className="grid-item">
+          <img src={vid6} alt="jade" className="slider-image" />
+          <div className="slider-info">
+            <div className="main-info">
+              <p className="video-title">Primary Income Housing</p>
+              <p className="video-channel">TechGinie</p>
+            </div>
+            <p className="views">1.2k views</p>
+          </div>
+        </li>
+        <li className="grid-item">
+          <img src={vid7} alt="jade" className="slider-image" />
+          <div className="slider-info">
+            <div className="main-info">
+              <p className="video-title">Primary Income Housing</p>
+              <p className="video-channel">TechGinie</p>
+            </div>
+            <p className="views">1.2k views</p>
+          </div>
+        </li>
       </ul>
     </div>
   );

@@ -45,9 +45,11 @@
     @include flex;
     background-color: hsl(100, 0, 96);
     border-radius: $space-1;
+    transition: all 0.72s ease;
 
     &:focus-within {
       background-color: hsl(100, 0, 90);
+      transition: all 0.72s ease;
 
       .nav-submit {
         background-color: hsl(100, 0, 40);
