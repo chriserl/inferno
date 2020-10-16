@@ -5,12 +5,12 @@
   width: 100%;
 
   .slider-title {
-    @include ph;
-    font-family: Assistant;
+    @include phb;
+    margin-left: $space-1;
   }
 
   .slider-container {
-    margin-top: $space-4;
+    margin-top: $space-2;
     width: 100%;
     overflow-x: scroll;
     @include scroll-hide;
@@ -20,13 +20,20 @@
       @include flex(row, center);
 
       .slider-item {
-        width: 280px;
-        margin: $space-2 $space-8 $space-2 0;
+        width: 224px;
+        margin: $space-2 $space-7 $space-2 0;
+        //background-color: hsl(100, 0, 100);
 
         .slider-image {
           width: 100%;
-          height: 10rem;
+          height: 8rem;
           border-radius: $space-1;
+          box-shadow: 2px 8px 18px hsl(100, 0, 80);
+          transition: all 0.25s ease;
+
+          &:hover {
+            box-shadow: 2px 8px 24px hsl(100, 0, 64);
+          }
         }
 
         .slider-info {
@@ -41,10 +48,10 @@
 
           .main-info {
             .video-title {
-              @include plb;
+              @include psb;
             }
             .video-channel {
-              @include psb;
+              @include pxb;
               color: hsl(100, 0, 40);
               margin-top: $space-2;
             }

@@ -48,6 +48,11 @@
   font-size: 1.16rem;
 }
 
+@mixin phb {
+  @include ph;
+  font-family: MulishMedium;
+}
+
 @mixin pl {
   font-size: 1rem;
 }
