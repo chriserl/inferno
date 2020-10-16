@@ -37,7 +37,7 @@
 
   .profile {
     width: max-content;
-    margin: $space-2 auto 0;
+    margin: $space-2 auto 0 $space-5;
     @include flex(column, center);
 
     .profile-image {
@@ -53,8 +53,8 @@
   }
 
   .view-links {
-    width: 64%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 0 auto 0 $space-3;
 
     .link-item {
       margin-bottom: $space-2;

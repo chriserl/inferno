@@ -35,13 +35,13 @@ const TopNav = (props) => {
       <div className="user-actions">
         <ul className="action-items">
           <li className="action-item">
-            <span className="las la-video icon-large"></span>
+            <span className="las la-video icon-regular"></span>
           </li>
           <li className="action-item">
-            <span className="las la-bell icon-large"></span>
+            <span className="las la-bell icon-regular"></span>
           </li>
           <li className="action-item">
-            <span className="las la-cog icon-large"></span>
+            <span className="las la-cog icon-regular"></span>
           </li>
           <li className="action-item profile-image">
             <img src={jade} alt="jade" className="user-image" />

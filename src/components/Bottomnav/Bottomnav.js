@@ -8,17 +8,17 @@ const Bottomnav = () => {
       <ul className="nav-items">
         <li className="nav-item">
           <button className="nav-button icon-font-button">
-            <span className="las la-video icon-large"></span>
+            <span className="las la-video icon-regular"></span>
           </button>
         </li>
         <li className="nav-item">
           <button className="nav-button icon-font-button">
-            <span className="las la-bell icon-large"></span>
+            <span className="las la-bell icon-regular"></span>
           </button>
         </li>
         <li className="nav-item">
           <button className="nav-button icon-font-button">
-            <span className="las la-cog icon-large"></span>
+            <span className="las la-cog icon-regular"></span>
           </button>
         </li>
         <li className="nav-item profile-image">
