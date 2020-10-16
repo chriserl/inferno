@@ -13,17 +13,12 @@
 
   .main-widened {
     width: 100%;
-
-    @include tab-screen {
-      padding: $space-6;
-    }
   }
 
   @include tab-screen {
     .main-contained {
       width: calc(100vw - 14rem);
       margin-left: auto;
-      padding: $space-6;
     }
   }
 }

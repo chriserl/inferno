@@ -1,0 +1,10 @@
+@import "../../sass/variables";
+@import "../../sass/utilities";
+
+.home {
+  width: 100%;
+
+  @include tab-screen {
+    padding: $space-6;
+  }
+}

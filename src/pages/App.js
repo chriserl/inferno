@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
-import SubscriptionSlider from "../components/SubscriptionSlider/SubscriptionSlider";
 import Topnav from "../components/Topnav/Topnav";
 import Sidebar from "../components/Sidebar/Sidebar";
+import Home from "../views/Home/Home";
 import "./app.scss";
 
 const App = () => {
@@ -36,7 +36,7 @@ const App = () => {
           toggleSidebar={() => handleMainState()}
         />
         <main className={layoutState.mainState}>
-          <SubscriptionSlider />
+          <Home />
         </main>
       </div>
     </BrowserRouter>
