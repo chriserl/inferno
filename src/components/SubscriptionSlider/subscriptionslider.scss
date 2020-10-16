@@ -1,0 +1,56 @@
+@import "../../sass/variables";
+@import "../../sass/utilities";
+
+.subscription-slider {
+  width: 100%;
+
+  .slider-title {
+    @include ph;
+    font-family: Assistant;
+  }
+
+  .slider-container {
+    margin-top: $space-4;
+    width: 100%;
+    overflow-x: scroll;
+    @include scroll-hide;
+
+    .slider-list {
+      width: max-content;
+      @include flex(row, center);
+
+      .slider-item {
+        width: 280px;
+        margin: $space-2 $space-8 $space-2 0;
+
+        .slider-image {
+          width: 100%;
+          height: 10rem;
+          border-radius: $space-1;
+        }
+
+        .slider-info {
+          width: 96%;
+          margin: $space-3 auto;
+          @include flex(row, flex-start, space-between);
+
+          .views {
+            @include pxb;
+            color: hsl(100, 0, 40);
+          }
+
+          .main-info {
+            .video-title {
+              @include plb;
+            }
+            .video-channel {
+              @include psb;
+              color: hsl(100, 0, 40);
+              margin-top: $space-2;
+            }
+          }
+        }
+      }
+    }
+  }
+}

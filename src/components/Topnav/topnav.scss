@@ -3,6 +3,8 @@
 
 .topnav {
   position: fixed;
+  top: 0;
+  left: 0;
   background: hsl(100, 0, 100);
   height: $space-10;
   width: 100vw;

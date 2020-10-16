@@ -1,5 +1,29 @@
+@import "../sass/variables";
+@import "../sass/utilities";
+
 .app {
   width: 100vw;
   height: 100vh;
   background: whitesmoke;
+  overflow-x: hidden;
+
+  main {
+    margin-top: $space-10;
+  }
+
+  .main-widened {
+    width: 100%;
+
+    @include tab-screen {
+      padding: $space-6;
+    }
+  }
+
+  @include tab-screen {
+    .main-contained {
+      width: calc(100vw - 14rem);
+      margin-left: auto;
+      padding: $space-6;
+    }
+  }
 }
