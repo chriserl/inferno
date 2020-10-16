@@ -1,6 +1,16 @@
 //Icons
+.icon-small {
+  font-size: 1rem;
+  padding: $space-1;
+}
+
 .icon-regular {
   font-size: 1.24rem;
+  padding: $space-1;
+}
+
+.icon-large {
+  font-size: 1.48rem;
   padding: $space-1;
 }
 
@@ -14,5 +24,48 @@
 
   &:hover {
     box-shadow: 2px 8px 18px hsl(100, 0, 88);
+  }
+}
+
+.nav-icon-button {
+  @extend .button;
+  @extend .icon-small;
+  color: hsl(100, 0, 10);
+  background-color: hsl(100, 0, 90);
+  transition: all 0.25s ease;
+
+  &:hover {
+    box-shadow: 2px 8px 18px hsl(100, 0, 88);
+  }
+}
+
+//Forms
+.nav-form {
+  .form-control {
+    @include flex;
+    background-color: hsl(100, 0, 96);
+    border-radius: $space-1;
+
+    &:focus-within {
+      background-color: hsl(100, 0, 90);
+
+      .nav-submit {
+        background-color: hsl(100, 0, 40);
+        color: hsl(100, 0, 96);
+      }
+    }
+
+    input {
+      @include ps;
+      color: hsl(100, 0, 10);
+      width: 100%;
+      border: none;
+      background: transparent;
+      padding: $space-1 $space-3;
+
+      &:focus {
+        outline: none;
+      }
+    }
   }
 }

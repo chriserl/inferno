@@ -6,12 +6,12 @@
 }
 
 .sidebar-opened {
-  height: 100vh;
+  height: calc(100vh - $space-10);
   width: 14rem;
   position: fixed;
   left: 0;
-  top: 0;
-  background: hsl(100, 0, 97);
+  top: $space-10;
+  background: hsl(100, 0, 100);
   padding: $space-2 $space-2 0 $space-3;
   @include flex(column, stretch);
   overflow-y: scroll;

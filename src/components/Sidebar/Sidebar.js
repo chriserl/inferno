@@ -86,7 +86,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className={sidebarState}>
+    <aside className={sidebarState}>
       <button
         onClick={() => toggleSidebar()}
         className="hide-sidebar icon-font-button"
@@ -163,7 +163,7 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </aside>
   );
 };
 

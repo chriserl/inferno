@@ -1,0 +1,45 @@
+@import "../../sass/variables";
+@import "../../sass/utilities";
+
+.topnav {
+  position: fixed;
+  background: hsl(100, 0, 100);
+  height: $space-10;
+  width: 100vw;
+  z-index: 1;
+  padding: 0 $space-4;
+  @include flex(row, center, space-between);
+
+  .brand-ham {
+    @include flex(row, center);
+    margin: auto 0;
+
+    .hamburger-button {
+      margin-right: $space-2;
+    }
+
+    .brand-image {
+      width: $space-14;
+    }
+  }
+
+  .nav-form {
+    width: 28%;
+  }
+
+  .user-actions {
+    .action-items {
+      @include flex(row, center, space-between);
+
+      .action-item {
+        margin-right: $space-1;
+      }
+    }
+
+    .user-image {
+      width: $space-5;
+      border-radius: 50%;
+      margin-left: $space-2;
+    }
+  }
+}
