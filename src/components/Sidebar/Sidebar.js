@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import "./sidebar.scss";
 import profileImage from "../../assets/images/jade.jpg";
@@ -76,19 +76,11 @@ const Subscriptions = () => {
   );
 };
 
-const Sidebar = () => {
-  let [sidebarState, setSidebarState] = useState(() => "sidebar-opened");
-
-  const toggleSidebar = () => {
-    setSidebarState(() =>
-      sidebarState === "sidebar-opened" ? "sidebar-closed" : "side-bar-opened"
-    );
-  };
-
+const Sidebar = (props) => {
   return (
-    <aside className={sidebarState}>
+    <aside className={props.sidebarState}>
       <button
-        onClick={() => toggleSidebar()}
+        onClick={props.toggleSidebar}
         className="hide-sidebar icon-font-button"
       >
         <span className="las la-angle-double-left"></span>

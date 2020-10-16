@@ -16,6 +16,9 @@
 
     .hamburger-button {
       margin-right: $space-2;
+      &:hover {
+        box-shadow: none;
+      }
     }
 
     .brand-image {

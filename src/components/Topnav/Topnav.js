@@ -4,11 +4,14 @@ import "./topnav.scss";
 import brandIcon from "../../assets/images/brand/brand.svg";
 import jade from "../../assets/images/jade.jpg";
 
-const TopNav = () => {
+const TopNav = (props) => {
   return (
     <nav className="topnav">
       <div className="brand-ham">
-        <button className="hamburger-button icon-font-button">
+        <button
+          onClick={props.toggleSidebar}
+          className="hamburger-button icon-font-button"
+        >
           <span className="las la-bars icon-large"></span>
         </button>
         <Link to="/" className="brand">
