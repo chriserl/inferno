@@ -11,6 +11,7 @@ const App = (props) => {
   let [layoutState, setLayoutState] = useState(() => ({
     sidebarState: "sidebar-open",
     mainState: "main-contained",
+    searchformState: "search-closed",
   }));
 
   const handleMainState = () => {
@@ -29,10 +30,28 @@ const App = (props) => {
     );
   };
 
+  const handleSearchToggle = () => {
+    setLayoutState(() =>
+      layoutState.searchformState === "search-open"
+        ? {
+            ...layoutState,
+            searchformState: "search-closed",
+          }
+        : {
+            ...layoutState,
+            searchformState: "search-open",
+          }
+    );
+  };
+
   return (
     <BrowserRouter>
       <div className="app">
-        <Topnav toggleSidebar={() => handleMainState()} />
+        <Topnav
+          searchformState={layoutState.searchformState}
+          toggleSidebar={() => handleMainState()}
+          toggleSearch={() => handleSearchToggle()}
+        />
         <Sidebar
           sidebarState={layoutState.sidebarState}
           toggleSidebar={() => handleMainState()}

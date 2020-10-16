@@ -19,7 +19,7 @@ const TopNav = (props) => {
         </Link>
       </div>
 
-      <form className="nav-form">
+      <form className={`${props.searchformState} nav-form`}>
         <div className="form-control">
           <input
             type="text"
@@ -45,6 +45,9 @@ const TopNav = (props) => {
           </li>
           <li className="action-item profile-image">
             <img src={jade} alt="jade" className="user-image" />
+          </li>
+          <li className="action-item search-icon" onClick={props.toggleSearch}>
+            <span className="las la-search icon-regular"></span>
           </li>
           <li className="action-item menu-icon">
             <button

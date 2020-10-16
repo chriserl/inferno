@@ -11,6 +11,7 @@
   z-index: 1;
   padding: 0 $space-1 0 $space-3;
   @include flex(row, center, space-between);
+  flex-wrap: wrap;
 
   @include tab-screen {
     padding: 0 $space-3 0 $space-2;
@@ -37,12 +38,25 @@
     }
   }
 
-  .nav-form {
+  .search-closed {
     @include d-none;
 
     @include tab-screen {
       @include flex(row, center);
       width: 28%;
+    }
+  }
+
+  .search-open {
+    @include flex;
+    order: 3;
+    width: 96%;
+    margin-top: $space-4;
+
+    @include tab-screen {
+      @include flex(row, center);
+      width: 28%;
+      order: 2;
     }
   }
 
@@ -69,6 +83,15 @@
 
         @include tab-screen {
           display: none;
+        }
+      }
+
+      .search-icon {
+        display: inline-block;
+        margin-right: 0;
+
+        @include tab-screen {
+          @include d-none;
         }
       }
     }
