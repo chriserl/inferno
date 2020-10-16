@@ -1,0 +1,26 @@
+@import "../../sass/variables";
+@import "../../sass/utilities";
+
+.bottom-nav {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  background-color: hsl(100, 0, 97);
+  padding: $space-1 $space-2;
+
+  @include tab-screen {
+    display: none;
+  }
+
+  .nav-items {
+    @include flex($justify: space-between);
+    margin-right: $space-1;
+
+    .nav-item {
+      .user-image {
+        width: 1.8rem;
+        border-radius: 50%;
+      }
+    }
+  }
+}
