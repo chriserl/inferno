@@ -9,17 +9,26 @@
   height: $space-10;
   width: 100vw;
   z-index: 1;
-  padding: 0 $space-2;
+  padding: 0 $space-1 0 $space-3;
   @include flex(row, center, space-between);
+
+  @include tab-screen {
+    padding: 0 $space-3 0 $space-2;
+  }
 
   .brand-ham {
     @include flex(row, center);
     margin: auto 0;
 
     .hamburger-button {
+      @include d-none;
       margin-right: $space-1;
       &:hover {
         box-shadow: none;
+      }
+
+      @include tab-screen {
+        display: inline-block;
       }
     }
 
@@ -52,6 +61,15 @@
 
       .action-item:last-child {
         display: inline-block;
+        margin-right: 0;
+
+        .hamburger-button:hover {
+          box-shadow: none;
+        }
+
+        @include tab-screen {
+          display: none;
+        }
       }
     }
 

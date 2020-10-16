@@ -26,7 +26,7 @@ const TopNav = (props) => {
             className="nav-search-input"
             placeholder="search"
           />
-          <button type="submit" className="nav-submit nav-icon-button">
+          <button type="submit" className="nav-submit form-icon-button">
             <span className="las la-search"></span>
           </button>
         </div>
@@ -43,8 +43,16 @@ const TopNav = (props) => {
           <li className="action-item">
             <span className="las la-cog icon-large"></span>
           </li>
-          <li className="action-item">
+          <li className="action-item profile-image">
             <img src={jade} alt="jade" className="user-image" />
+          </li>
+          <li className="action-item menu-icon">
+            <button
+              onClick={props.toggleSidebar}
+              className="hamburger-button icon-font-button"
+            >
+              <span className="las la-bars icon-large"></span>
+            </button>{" "}
           </li>
         </ul>
       </div>

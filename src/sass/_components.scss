@@ -27,7 +27,7 @@
   }
 }
 
-.nav-icon-button {
+.form-icon-button {
   @extend .button;
   @extend .icon-small;
   color: hsl(100, 0, 10);
@@ -42,6 +42,7 @@
 //Forms
 .nav-form {
   .form-control {
+    width: 100%;
     @include flex;
     background-color: hsl(100, 0, 96);
     border-radius: $space-1;
