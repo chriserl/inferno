@@ -19,7 +19,7 @@ const UserLinks = () => {
         </li>
         <li className="link-item">
           <NavLink
-            to="/"
+            to="/trending"
             className="view-link"
             activeClassName="active-view-link"
           >
