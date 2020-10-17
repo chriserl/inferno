@@ -9,7 +9,7 @@ const UserLinks = () => {
       <ul className="links">
         <li className="link-item">
           <NavLink
-            to="/"
+            to="/inferno"
             className="view-link"
             activeClassName="active-view-link"
           >
@@ -19,7 +19,7 @@ const UserLinks = () => {
         </li>
         <li className="link-item">
           <NavLink
-            to="/trending"
+            to="/inferno/trending"
             className="view-link"
             activeClassName="active-view-link"
           >
@@ -29,7 +29,7 @@ const UserLinks = () => {
         </li>
         <li className="link-item">
           <NavLink
-            to="/"
+            to="/inferno/subscriptions"
             className="view-link"
             activeClassName="active-view-link"
           >

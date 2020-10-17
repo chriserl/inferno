@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Topnav from "../components/Topnav/Topnav";
 import Bottomnav from "../components/Bottomnav/Bottomnav";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Home from "../views/Home/Home";
 import Trending from "../views/Trending/Trending";
+import Subscriptions from "../views/Subscriptions/Subscriptions";
 import "./app.scss";
 
 const App = (props) => {
@@ -58,15 +59,15 @@ const App = (props) => {
         />
         <Bottomnav />
         <main className={layoutState.mainState}>
-          <Route exact path={`${props.match.url}`} component={Home}></Route>
-          <Route
-            path={`${props.match.url}trending`}
-            component={Trending}
-          ></Route>
-          <Route
-            path={`${props.match.url}subscriptions`}
-            component={Trending}
-          ></Route>
+          <Switch>
+            <Route exact path="/" component={Home}></Route>
+            <Route exact path="/inferno" component={Home}></Route>
+            <Route path="/inferno/trending" component={Trending}></Route>
+            <Route
+              path="/inferno/subscriptions"
+              component={Subscriptions}
+            ></Route>
+          </Switch>
         </main>
       </div>
     </BrowserRouter>
