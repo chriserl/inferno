@@ -56,15 +56,18 @@ const App = (props) => {
         <Sidebar
           sidebarState={layoutState.sidebarState}
           toggleSidebar={() => handleMainState()}
+          defaultPath={props.match.url}
         />
         <Bottomnav />
         <main className={layoutState.mainState}>
           <Switch>
-            <Route exact path="/" component={Home}></Route>
-            <Route exact path="/inferno" component={Home}></Route>
-            <Route path="/inferno/trending" component={Trending}></Route>
+            <Route exact path={`${props.match.url}`} component={Home}></Route>
             <Route
-              path="/inferno/subscriptions"
+              path={`${props.match.url}/trending`}
+              component={Trending}
+            ></Route>
+            <Route
+              path={`${props.match.url}/subscriptions`}
               component={Subscriptions}
             ></Route>
           </Switch>

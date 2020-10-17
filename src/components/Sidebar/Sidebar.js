@@ -3,13 +3,13 @@ import { NavLink } from "react-router-dom";
 import "./sidebar.scss";
 import profileImage from "../../assets/images/jade.jpg";
 
-const UserLinks = () => {
+const UserLinks = (props) => {
   return (
     <div className="view-links app-links">
       <ul className="links">
         <li className="link-item">
           <NavLink
-            to="/inferno"
+            to={props.defaultPath}
             className="view-link"
             activeClassName="active-view-link"
           >
@@ -19,7 +19,7 @@ const UserLinks = () => {
         </li>
         <li className="link-item">
           <NavLink
-            to="/inferno/trending"
+            to={`${props.defaultPath}/trending`}
             className="view-link"
             activeClassName="active-view-link"
           >
@@ -29,7 +29,7 @@ const UserLinks = () => {
         </li>
         <li className="link-item">
           <NavLink
-            to="/inferno/subscriptions"
+            to={`${props.defaultPath}/subscriptions`}
             className="view-link"
             activeClassName="active-view-link"
           >
@@ -89,7 +89,7 @@ const Sidebar = (props) => {
         <img src={profileImage} alt="jade" className="profile-image" />
         <p className="profile-name">Unjaded Jade</p>
       </div>
-      <UserLinks />
+      <UserLinks defaultPath={props.defaultPath} />
       <hr />
 
       <div className="view-links user-links">

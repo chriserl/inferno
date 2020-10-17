@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Redirect, Route } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
 import App from "./pages/App";
 import "./sass/main.scss";
@@ -9,10 +9,10 @@ import "line-awesome/dist/line-awesome/css/line-awesome.min.css";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={App}></Route>
-        <Route path="/inferno" component={App}></Route>
-      </Switch>
+      <Route exact path="/">
+        <Redirect to="/inferno" />{" "}
+      </Route>
+      <Route path="/inferno" component={App}></Route>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
