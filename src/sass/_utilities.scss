@@ -77,14 +77,13 @@
 
 @mixin pxb {
   @include px;
-  font-family: MulishMedium;
+  font-family: MulishBold;
 }
 
 //Buttons
 .button {
   border: none;
-  background: transparent;
-  padding: $space-2;
+  padding: $space-1;
   border-radius: $space-1;
 }
 

@@ -39,6 +39,32 @@
   }
 }
 
+.link-button {
+  @extend .button;
+  @include ps;
+  color: $primary-color;
+  background: $primary-light;
+  padding: 0.48rem 1.6rem;
+  border-radius: 0.8rem;
+  transition: all 0.25s ease;
+
+  &:hover {
+    //box-shadow: none;
+    color: red;
+  }
+}
+
+.primary-button {
+  @extend .button;
+  @include ps;
+  box-shadow: 2px 8px 18px hsl(1, 100, 90);
+  width: max-content;
+  color: white;
+  background: $primary-color;
+  padding: 0.48rem 1.6rem;
+  border-radius: 0.8rem;
+}
+
 //Forms
 .nav-form {
   .form-control {

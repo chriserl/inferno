@@ -1,13 +1,8 @@
 @import "../../sass/variables";
 @import "../../sass/utilities";
 
-.subscriptions {
+.trending {
   width: 100%;
-
-  .section-title {
-    @include phb;
-    margin-bottom: $space-4;
-  }
 
   @include tab-screen {
     padding: $space-6;

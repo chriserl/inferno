@@ -1,0 +1,70 @@
+@import "../../sass/variables";
+@import "../../sass/utilities";
+
+.video-card {
+  width: 100%;
+
+  .video-thumbnail {
+    width: 100%;
+    height: 8rem;
+    border-radius: $space-1;
+    box-shadow: 2px 8px 18px hsl(100, 0, 80);
+    transition: all 0.25s ease;
+
+    &:hover {
+      box-shadow: 2px 8px 24px hsl(100, 0, 64);
+    }
+  }
+
+  .video-info {
+    width: 96%;
+    margin: $space-3 auto;
+    @include flex(row, flex-end, space-between);
+
+    .main-info {
+      .video-title {
+        @include plb;
+      }
+
+      .video-channel {
+        @include pxb;
+        color: hsl(100, 0, 40);
+        margin-top: 0.56rem;
+      }
+
+      .views-likes {
+        @include flex;
+        margin-top: 0.48rem;
+
+        .las {
+          @include pl;
+        }
+
+        .views {
+          @include flex;
+
+          .views-count {
+            @include pxb;
+            margin-left: 0.24rem;
+            color: hsl(100, 0, 40);
+          }
+        }
+
+        .likes {
+          @include flex;
+          margin-left: $space-2;
+
+          .likes-count {
+            @include pxb;
+            margin-left: 0.24rem;
+            color: hsl(100, 0, 40);
+          }
+        }
+      }
+    }
+
+    .video-age {
+      @include psb;
+    }
+  }
+}

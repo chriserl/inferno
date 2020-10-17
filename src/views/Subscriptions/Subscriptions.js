@@ -1,11 +1,12 @@
 import React from "react";
-import SubscriptionSlider from "../../components/SubscriptionSlider/SubscriptionSlider";
+import VideoSlider from "../../components/VideoSlider/VideoSlider";
+import "./subscriptions.scss";
 
 const Subscriptions = () => {
   return (
     <div className="subscriptions">
       <p className="section-title">Subscriptions</p>
-      <SubscriptionSlider />
+      <VideoSlider />
     </div>
   );
 };
