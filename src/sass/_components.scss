@@ -1,100 +1,99 @@
 //Icons
 .icon-small {
-  font-size: 1rem;
-  padding: $space-1;
+	font-size: 1rem;
+	padding: $space-1;
 }
 
 .icon-regular {
-  font-size: 1.24rem;
-  padding: $space-1;
+	font-size: 1.24rem;
+	padding: $space-1;
 }
 
 .icon-large {
-  font-size: 1.48rem;
-  padding: $space-1;
+	font-size: 1.48rem;
+	padding: $space-1;
 }
 
 //Buttons
 .icon-font-button {
-  @extend .button;
-  @extend .icon-regular;
-  color: hsl(100, 0, 10);
-  background-color: hsl(100, 100, 100);
-  transition: all 0.25s ease;
+	@extend .button;
+	@extend .icon-regular;
+	color: hsl(100, 0, 10);
+	background-color: hsl(100, 100, 100);
+	transition: all 0.25s ease;
 
-  &:hover {
-    box-shadow: 2px 8px 18px hsl(100, 0, 88);
-  }
+	&:hover {
+		box-shadow: 2px 8px 18px hsl(100, 0, 88);
+	}
 }
 
 .form-icon-button {
-  @extend .button;
-  @extend .icon-small;
-  color: hsl(100, 0, 10);
-  background-color: hsl(100, 0, 90);
-  transition: all 0.25s ease;
+	@extend .button;
+	@extend .icon-regular;
+	color: hsl(100, 0, 10);
+	background-color: hsl(100, 0, 90);
+	transition: all 0.25s ease;
 
-  &:hover {
-    box-shadow: 2px 8px 18px hsl(100, 0, 88);
-  }
+	&:hover {
+		box-shadow: 2px 8px 18px hsl(100, 0, 88);
+	}
 }
 
-.link-button {
-  @extend .button;
-  @include ps;
-  color: $primary-color;
-  background: $primary-light;
-  padding: 0.48rem 1.6rem;
-  border-radius: 0.8rem;
-  transition: all 0.25s ease;
+.light-button {
+	@extend .button;
+	@include ps;
+	color: $primary-color;
+	background: $primary-light;
+	padding: 0.48rem 1.6rem;
+	border-radius: 0.8rem;
+	transition: all 0.25s ease;
 
-  &:hover {
-    //box-shadow: none;
-    color: red;
-  }
+	&:hover {
+		box-shadow: 2px 8px 18px hsl(1, 100, 92);
+	}
 }
 
 .primary-button {
-  @extend .button;
-  @include ps;
-  box-shadow: 2px 8px 18px hsl(1, 100, 90);
-  width: max-content;
-  color: white;
-  background: $primary-color;
-  padding: 0.48rem 1.6rem;
-  border-radius: 0.8rem;
+	@extend .button;
+	@include ps;
+	box-shadow: 2px 8px 18px hsl(1, 100, 90);
+	width: max-content;
+	color: white;
+	background: $primary-color;
+	padding: 0.48rem 1.6rem;
+	border-radius: 0.8rem;
 }
 
 //Forms
 .nav-form {
-  .form-control {
-    width: 100%;
-    @include flex;
-    background-color: hsl(100, 0, 96);
-    border-radius: $space-1;
-    transition: all 0.72s ease;
+	.form-control {
+		width: 100%;
+		@include flex;
+		background-color: hsl(100, 0, 96);
+		border-radius: $space-1;
+		transition: all 0.72s ease;
 
-    &:focus-within {
-      background-color: hsl(100, 0, 90);
-      transition: all 0.72s ease;
+		&:focus-within {
+			background-color: hsl(100, 0, 90);
+			transition: all 0.72s ease;
 
-      .nav-submit {
-        background-color: hsl(100, 0, 40);
-        color: hsl(100, 0, 96);
-      }
-    }
+			.nav-submit {
+				background-color: hsl(100, 0, 40);
+				color: hsl(100, 0, 96);
+			}
+		}
 
-    input {
-      @include ps;
-      color: hsl(100, 0, 10);
-      width: 100%;
-      border: none;
-      background: transparent;
-      padding: $space-1 $space-3;
+		input {
+			@include ps;
+			color: hsl(100, 0, 10);
+			width: 100%;
+			border: none;
+			background: transparent;
+			padding: $space-2 $space-3;
 
-      &:focus {
-        outline: none;
-      }
-    }
-  }
+			&:focus {
+				outline: none;
+			}
+		}
+	}
 }

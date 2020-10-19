@@ -10,7 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Route exact path="/">
-        <Redirect to="/inferno" />{" "}
+        <Redirect to="/inferno" />
       </Route>
       <Route path="/inferno" component={App}></Route>
     </BrowserRouter>

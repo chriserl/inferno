@@ -3,7 +3,7 @@
 
 .bottom-nav {
   width: 100vw;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   background-color: hsl(100, 0, 97);
   padding: $space-1 $space-2;
