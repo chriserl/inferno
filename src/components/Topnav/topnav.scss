@@ -2,104 +2,104 @@
 @import "../../sass/utilities";
 
 .topnav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: hsl(100, 0, 100);
-  height: $space-10;
-  width: 100vw;
-  z-index: 1;
-  padding: 0 $space-1 0 $space-3;
-  @include flex(row, center, space-between);
-  flex-wrap: wrap;
+	position: sticky;
+	top: 0;
+	left: 0;
+	background: hsl(100, 0, 100);
+	height: $space-10;
+	width: 100vw;
+	z-index: 1;
+	padding: 0 $space-1 0 $space-3;
+	@include flex(row, center, space-between);
+	flex-wrap: wrap;
 
-  @include tab-screen {
-    padding: 0 $space-3 0 $space-2;
-  }
+	@include tab-screen {
+		padding: 0 $space-3 0 $space-2;
+	}
 
-  .brand-ham {
-    @include flex(row, center);
-    margin: auto 0;
+	.brand-ham {
+		@include flex(row, center);
+		margin: auto 0;
 
-    .hamburger-button {
-      @include d-none;
-      margin-right: $space-1;
-      &:hover {
-        box-shadow: none;
-      }
+		.hamburger-button {
+			@include d-none;
+			margin-right: $space-1;
+			&:hover {
+				box-shadow: none;
+			}
 
-      @include tab-screen {
-        display: inline-block;
-      }
-    }
+			@include tab-screen {
+				display: inline-block;
+			}
+		}
 
-    .brand-image {
-      width: $space-14;
-    }
-  }
+		.brand-image {
+			width: $space-14;
+		}
+	}
 
-  .search-closed {
-    @include d-none;
+	.search-closed {
+		@include d-none;
 
-    @include tab-screen {
-      @include flex(row, center);
-      width: 28%;
-    }
-  }
+		@include tab-screen {
+			@include flex(row, center);
+			width: 28%;
+		}
+	}
 
-  .search-open {
-    @include flex;
-    order: 3;
-    width: 96%;
-    margin-top: $space-4;
+	.search-open {
+		@include flex;
+		order: 3;
+		width: 96%;
+		margin-top: $space-4;
 
-    @include tab-screen {
-      @include flex(row, center);
-      width: 28%;
-      order: 2;
-    }
-  }
+		@include tab-screen {
+			@include flex(row, center);
+			width: 28%;
+			order: 2;
+		}
+	}
 
-  .user-actions {
-    .action-items {
-      @include flex(row, center, space-between);
+	.user-actions {
+		.action-items {
+			@include flex(row, center, space-between);
 
-      .action-item {
-        margin-right: $space-1;
-        @include d-none;
+			.action-item {
+				margin-right: $space-1;
+				@include d-none;
 
-        @include tab-screen {
-          display: inline-block;
-        }
-      }
+				@include tab-screen {
+					display: inline-block;
+				}
+			}
 
-      .action-item:last-child {
-        display: inline-block;
-        margin-right: 0;
+			.action-item:last-child {
+				display: inline-block;
+				margin-right: 0;
 
-        .hamburger-button:hover {
-          box-shadow: none;
-        }
+				.hamburger-button:hover {
+					box-shadow: none;
+				}
 
-        @include tab-screen {
-          display: none;
-        }
-      }
+				@include tab-screen {
+					display: none;
+				}
+			}
 
-      .search-icon {
-        display: inline-block;
-        margin-right: 0;
+			.search-icon {
+				display: inline-block;
+				margin-right: 0;
 
-        @include tab-screen {
-          @include d-none;
-        }
-      }
-    }
+				@include tab-screen {
+					@include d-none;
+				}
+			}
+		}
 
-    .user-image {
-      width: $space-4;
-      border-radius: 50%;
-      margin-left: $space-2;
-    }
-  }
+		.user-image {
+			width: $space-4;
+			border-radius: 50%;
+			margin-left: $space-2;
+		}
+	}
 }
