@@ -2,55 +2,57 @@
 @import "../../sass/utilities";
 
 .video-slider {
-  width: 100%;
+	width: 100%;
 
-  .slider-header {
-    width: 100%;
-    @include flex($justify: space-between);
+	.slider-header {
+		width: 98%;
+		margin: 0 auto $space-1;
+		@include flex($justify: space-between);
 
-    .slider-title {
-      @include flex;
+		.slider-title {
+			@include flex;
 
-      .channel-image {
-        width: 1.6rem;
-        height: 1.6rem;
-        border-radius: 50%;
-      }
-      .title {
-        @include plb;
-        margin-left: $space-2;
-      }
-    }
+			.title {
+				@include plb;
+				margin-left: $space-2;
+				color: $text-black;
+			}
+		}
 
-    .slider-extra {
-      @include flex;
+		.slider-extra {
+			@include flex;
 
-      .slider-controls {
-        margin-left: $space-4;
+			.slider-controls {
+				display: none;
 
-        .slider-right,
-        .slider-left {
-          background: none;
-          margin: 0 $space-1;
-        }
-      }
-    }
-  }
+				@include tab-screen {
+					display: block;
+					margin-left: $space-4;
 
-  .slider-container {
-    margin-top: $space-2;
-    width: 100%;
-    overflow-x: scroll;
-    @include scroll-hide;
+					.slider-right,
+					.slider-left {
+						background: none;
+						margin: 0 $space-1;
+					}
+				}
+			}
+		}
+	}
 
-    .slider-list {
-      width: max-content;
-      @include flex(row, center);
+	.slider-container {
+		margin-top: $space-2;
+		width: 100%;
+		overflow-x: scroll;
+		@include scroll-hide;
 
-      .slider-item {
-        width: 240px;
-        margin: $space-2 $space-7 $space-2 0;
-      }
-    }
-  }
+		.slider-list {
+			width: max-content;
+			@include flex(row, center);
+
+			.slider-item {
+				width: 232px;
+				margin: $space-2 $space-7 $space-2 0;
+			}
+		}
+	}
 }

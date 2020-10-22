@@ -2,25 +2,37 @@
 @import "../../sass/utilities";
 
 .bottom-nav {
-  width: 100vw;
-  position: fixed;
-  bottom: 0;
-  background-color: hsl(100, 0, 97);
-  padding: $space-1 $space-2;
+	width: 100vw;
+	position: fixed;
+	bottom: 0;
+	background-color: hsl(100, 0, 97);
+	padding: $space-1 $space-2;
 
-  @include tab-screen {
-    display: none;
-  }
+	@include tab-screen {
+		display: none;
+	}
 
-  .nav-items {
-    @include flex($justify: space-between);
-    margin-right: $space-1;
+	.nav-items {
+		@include flex($justify: space-between);
+		margin-right: $space-1;
 
-    .nav-item {
-      .user-image {
-        width: $space-4;
-        border-radius: 50%;
-      }
-    }
-  }
+		.nav-item {
+			.nav-button {
+				background: none;
+
+				.las {
+					color: $text-black;
+
+					&:hover {
+						color: $primary-color;
+					}
+				}
+			}
+
+			.user-image {
+				width: $space-4;
+				border-radius: 50%;
+			}
+		}
+	}
 }

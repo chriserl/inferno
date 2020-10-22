@@ -2,9 +2,14 @@
 @import "../../sass/utilities";
 
 .home {
-  width: 100%;
+	width: 100%;
+	padding: $space-3;
 
-  @include tab-screen {
-    padding: $space-6;
-  }
+	.subscriptions-slider {
+		margin-bottom: $space-8;
+	}
+
+	@include tab-screen {
+		padding: $space-6;
+	}
 }

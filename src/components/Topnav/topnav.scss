@@ -5,11 +5,11 @@
 	position: sticky;
 	top: 0;
 	left: 0;
-	background: hsl(100, 0, 100);
 	height: $space-10;
+	background: hsl(100, 0, 100);
 	width: 100vw;
 	z-index: 1;
-	padding: 0 $space-1 0 $space-3;
+	padding: 0 $space-1 0 $space-2;
 	@include flex(row, center, space-between);
 	flex-wrap: wrap;
 
@@ -24,6 +24,7 @@
 		.hamburger-button {
 			@include d-none;
 			margin-right: $space-1;
+			border: none;
 			&:hover {
 				box-shadow: none;
 			}
@@ -50,8 +51,9 @@
 	.search-open {
 		@include flex;
 		order: 3;
-		width: 96%;
+		width: 90%;
 		margin-top: $space-4;
+		margin-bottom: $space-4;
 
 		@include tab-screen {
 			@include flex(row, center);
@@ -65,8 +67,20 @@
 			@include flex(row, center, space-between);
 
 			.action-item {
-				margin-right: $space-1;
+				margin-right: $space-3;
 				@include d-none;
+
+				.action-botton {
+					background: none;
+				}
+
+				.las {
+					color: $text-black;
+
+					&:hover {
+						color: $primary-color;
+					}
+				}
 
 				@include tab-screen {
 					display: inline-block;
@@ -99,7 +113,7 @@
 		.user-image {
 			width: $space-4;
 			border-radius: 50%;
-			margin-left: $space-2;
+			margin-left: $space-4;
 		}
 	}
 }

@@ -1,104 +1,104 @@
 //Flexbox
 @mixin flex($direction: row, $align: center, $justify: null) {
-  display: flex;
-  flex-direction: $direction;
-  align-items: $align;
-  justify-content: $justify;
+	display: flex;
+	flex-direction: $direction;
+	align-items: $align;
+	justify-content: $justify;
 }
 
 //Grid
 @mixin grid($align: null, $justify: null) {
-  display: grid;
-  align-items: $align;
-  justify-content: $justify;
+	display: grid;
+	align-items: $align;
+	justify-content: $justify;
 }
 
 //Media Queries
 
 //Big Smartphone devices
 @mixin phone-lg {
-  @media screen and (min-width: 414px) {
-    @content;
-  }
+	@media screen and (min-width: 411px) {
+		@content;
+	}
 }
 
 //Tablet devices
 @mixin tab-screen {
-  @media screen and (min-width: 600px) {
-    @content;
-  }
+	@media screen and (min-width: 600px) {
+		@content;
+	}
 }
 
 //Small screen laptops
 @mixin laptop-small {
-  @media screen and (min-width: 1024px) {
-    @content;
-  }
+	@media screen and (min-width: 1024px) {
+		@content;
+	}
 }
 
 //Large screen laptops
 @mixin laptop-large {
-  @media screen and (min-width: 1440px) {
-    @content;
-  }
+	@media screen and (min-width: 1440px) {
+		@content;
+	}
 }
 
 //Text
 @mixin ph {
-  font-size: 1.16rem;
+	font-size: 1.16rem;
 }
 
 @mixin phb {
-  @include ph;
-  font-family: MulishMedium;
+	@include ph;
+	font-family: PoppinsMedium;
 }
 
 @mixin pl {
-  font-size: 1rem;
+	font-size: 1rem;
 }
 
 @mixin plb {
-  @include pl;
-  font-family: MulishMedium;
+	@include pl;
+	font-family: PoppinsMedium;
 }
 
 @mixin ps {
-  font-size: 0.88rem;
+	font-size: 0.88rem;
 }
 
 @mixin psb {
-  @include ps;
-  font-family: MulishMedium;
+	@include ps;
+	font-family: PoppinsMedium;
 }
 
 @mixin px {
-  font-size: 0.8rem;
+	font-size: 0.8rem;
 }
 
 @mixin pxb {
-  @include px;
-  font-family: MulishBold;
+	@include px;
+	font-family: PoppinsMedium;
 }
 
 //Buttons
 .button {
-  border: none;
-  padding: $space-1;
-  border-radius: $space-1;
+	border: none;
+	padding: $space-1;
+	border-radius: 0.56rem;
 }
 
 //Hide Scrollbar
 @mixin scroll-hide {
-  scrollbar-width: none;
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
+	scrollbar-width: none;
+	overflow: -moz-scrollbars-none;
+	-ms-overflow-style: none;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 //Display none
 @mixin d-none {
-  display: none;
+	display: none;
 }

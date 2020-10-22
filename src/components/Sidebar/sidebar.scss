@@ -2,102 +2,111 @@
 @import "../../sass/utilities";
 
 .sidebar-closed {
-  width: 0;
-  height: 0;
-  transition: all 0.25s ease;
+	width: 0;
+	height: 0;
+	transition: all 0.25s ease;
 
-  * {
-    display: none;
-  }
+	* {
+		display: none;
+	}
 }
 
 .sidebar-open {
-  height: calc(100vh - $space-10);
-  width: 14rem;
-  position: fixed;
-  left: 0;
-  top: $space-10;
-  background: hsl(100, 0, 100);
-  padding: 0 $space-2 0 $space-3;
-  @include flex(column, stretch);
-  overflow-y: scroll;
-  @include scroll-hide;
-  transition: all 0.25s ease;
+	height: 100%;
+	width: 14rem;
+	position: fixed;
+	left: 0;
+	top: $space-10;
+	background: hsl(220, 13%, 100%);
+	@include flex(column, stretch);
+	overflow-y: scroll;
+	scrollbar-width: 6px;
+	@include scroll-hide;
+	transition: all 0.25s ease;
 
-  .hide-sidebar {
-    width: max-content;
-    align-self: flex-end;
-  }
+	.hide-sidebar {
+		width: max-content;
+		align-self: flex-end;
+		margin-right: $space-1;
+	}
 
-  hr {
-    opacity: 0.4;
-    width: 80%;
-    margin: $space-4 auto;
-  }
+	hr {
+		opacity: 0.4;
+		width: 80%;
+		margin: $space-4 auto;
+	}
 
-  .profile {
-    width: max-content;
-    margin: $space-2 auto 0 $space-5;
-    @include flex(column, center);
+	.profile {
+		width: max-content;
+		margin: 0 auto;
+		@include flex(column, center);
+		padding: 0 $space-2 0 $space-3;
 
-    .profile-image {
-      width: 5.6rem;
-      border-radius: 50%;
-      margin-bottom: $space-3;
-    }
+		.profile-image {
+			width: 5.6rem;
+			border-radius: 50%;
+			margin-bottom: $space-3;
+		}
 
-    .profile-name {
-      @include plb;
-      color: hsl(100, 0, 20);
-    }
-  }
+		.profile-name {
+			@include ps;
+			color: $text-black;
+		}
+	}
 
-  .view-links {
-    width: 80%;
-    margin: 0 auto 0 $space-3;
+	.view-links {
+		width: 80%;
+		margin: 0 auto 0 $space-3;
+		padding: 0 $space-2 0 $space-3;
 
-    .link-item {
-      margin-bottom: $space-2;
+		.link-item {
+			margin-bottom: $space-2;
 
-      .view-link {
-        @include flex(row, center);
+			.view-link {
+				@include flex(row, center);
 
-        .link-icon {
-          margin-right: $space-1;
-          color: hsl(100, 0, 10);
-        }
+				.link-icon {
+					margin-right: $space-2;
+					color: hsl(100, 0, 10);
+				}
 
-        .link-text {
-          @include psb;
-          color: hsl(100, 0, 40);
-        }
-      }
-    }
-  }
+				.link-text {
+					@include psb;
+					color: $gray-text;
+				}
+			}
+			.active-view-link {
+				.link-icon,
+				.link-text {
+					color: $primary-color;
+				}
+			}
+		}
+	}
 
-  .app-links {
-    margin-top: $space-6;
-  }
+	.app-links {
+		margin-top: $space-6;
+	}
 
-  .subscriptions {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: $space-8;
-    @include grid($justify: space-between);
-    grid-template-columns: repeat(auto-fit, minmax(2.4rem, 1fr));
-    grid-gap: $space-2;
+	.subscriptions {
+		width: 96%;
+		margin: 0 auto;
+		margin-top: $space-8;
+		@include grid($justify: space-between);
+		grid-template-columns: repeat(auto-fit, minmax(1.6rem, 1fr));
+		grid-gap: $space-2;
 
-    .channel-image-container {
-      width: 100%;
+		.channel-image-container {
+			width: 100%;
 
-      .channel-image {
-        width: 100%;
-        border-radius: 50%;
-      }
-    }
-  }
+			.channel-image {
+				width: 100%;
+				border-radius: 50%;
+			}
+		}
+	}
 
-  .utility-links {
-    margin-top: $space-8;
-  }
+	.utility-links {
+		margin-top: $space-2;
+	}
 }

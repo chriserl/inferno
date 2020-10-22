@@ -14,16 +14,27 @@
 	padding: $space-1;
 }
 
+.image-icon {
+	width: $space-5;
+	height: $space-5;
+	border-radius: $space-2;
+	border: 1px solid hsl(100, 0, 90);
+	box-shadow: 2px 8px 16px hsl(40, 0, 88);
+}
+
 //Buttons
 .icon-font-button {
 	@extend .button;
 	@extend .icon-regular;
+	padding: 0;
 	color: hsl(100, 0, 10);
 	background-color: hsl(100, 100, 100);
+	border: 1px solid $primary-dark;
 	transition: all 0.25s ease;
 
 	&:hover {
-		box-shadow: 2px 8px 18px hsl(100, 0, 88);
+		box-shadow: 2px 8px 18px hsl(100, 0, 90);
+		color: $primary-color;
 	}
 }
 
@@ -31,17 +42,19 @@
 	@extend .button;
 	@extend .icon-regular;
 	color: hsl(100, 0, 10);
-	background-color: hsl(100, 0, 90);
+	background-color: hsl(100, 0, 100);
+	border: 1px solid $primary-dark;
 	transition: all 0.25s ease;
 
 	&:hover {
 		box-shadow: 2px 8px 18px hsl(100, 0, 88);
+		color: $primary-color;
 	}
 }
 
 .light-button {
 	@extend .button;
-	@include ps;
+	@include px;
 	color: $primary-color;
 	background: $primary-light;
 	padding: 0.48rem 1.6rem;
@@ -49,16 +62,24 @@
 	transition: all 0.25s ease;
 
 	&:hover {
-		box-shadow: 2px 8px 18px hsl(1, 100, 92);
+		background: $primary-color;
+		color: $primary-light;
 	}
+}
+
+.light-button-sm {
+	@extend .light-button;
+	@include px;
+	padding: 0.4rem 1.2rem;
+	border-radius: 0.56rem;
 }
 
 .primary-button {
 	@extend .button;
-	@include ps;
+	@include px;
 	box-shadow: 2px 8px 18px hsl(1, 100, 90);
 	width: max-content;
-	color: white;
+	color: $primary-light;
 	background: $primary-color;
 	padding: 0.48rem 1.6rem;
 	border-radius: 0.8rem;
@@ -67,19 +88,19 @@
 //Forms
 .nav-form {
 	.form-control {
-		width: 100%;
+		width: 90%;
+		margin: 0 auto;
 		@include flex;
 		background-color: hsl(100, 0, 96);
-		border-radius: $space-1;
+		border-radius: $space-2;
 		transition: all 0.72s ease;
 
 		&:focus-within {
-			background-color: hsl(100, 0, 90);
+			background-color: hsl(100, 0, 94);
 			transition: all 0.72s ease;
 
 			.nav-submit {
-				background-color: hsl(100, 0, 40);
-				color: hsl(100, 0, 96);
+				box-shadow: 2px 8px 18px hsl(100, 0, 88);
 			}
 		}
 
@@ -89,10 +110,14 @@
 			width: 100%;
 			border: none;
 			background: transparent;
-			padding: $space-2 $space-3;
+			padding: 0.64rem $space-3;
 
 			&:focus {
 				outline: none;
+			}
+
+			&:placeholder-shown {
+				@include ps;
 			}
 		}
 	}

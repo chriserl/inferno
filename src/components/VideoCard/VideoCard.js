@@ -1,29 +1,49 @@
 import React from "react";
 import "./videocard.scss";
+import Utils from "../../utils";
 
 const VideoCard = (props) => {
-  return (
-    <div className="video-card">
-      <img src={props.thumbnail} alt="jade" className="video-thumbnail" />
-      <div className="video-info">
-        <div className="main-info">
-          <p className="video-title">Dua Lipa</p>
-          <p className="video-channel">Muchelle B</p>
-          <div className="views-likes">
-            <div className="views">
-              <span className="las la-eye"></span>
-              <p className="views-count">1.4k</p>
-            </div>
-            <div className="likes">
-              <span className="las la-thumbs-up"></span>
-              <p className="likes-count">104k</p>
-            </div>
-          </div>
-        </div>
-        <p className="video-age">3 months ago</p>
-      </div>
-    </div>
-  );
+	let utilities = new Utils();
+	if (props.video) {
+		return (
+			<div className="video-card">
+				<a href="/">
+					<img
+						src={props.video.thumbnail}
+						alt="jade"
+						className="video-thumbnail"
+					/>
+				</a>
+				<div className="video-info">
+					<div className="main-info">
+						<a href="/" className="video-title">
+							{utilities.formatVideoTitle(props.video.title)}
+						</a>
+						<a href="/" className="video-channel">
+							{utilities.formatChannelName(props.video.channelName)}
+						</a>
+						<div className="views-likes">
+							<div className="views">
+								<span className="las la-eye"></span>
+								<p className="views-count">
+									{utilities.statisticCount(props.video.viewCount)}
+								</p>
+							</div>
+							<div className="likes">
+								<p className="video-age">{props.video.date.slice(0, 10)}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		);
+	} else {
+		return (
+			<div className="video-card">
+				<p className="ph">Loading...</p>
+			</div>
+		);
+	}
 };
 
 export default VideoCard;

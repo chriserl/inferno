@@ -1,0 +1,29 @@
+@import "../../sass/variables";
+@import "../../sass/utilities";
+
+.video-grid {
+	width: 100%;
+
+	.grid-title {
+		@include phb;
+		margin-bottom: $space-6;
+		margin-left: $space-2;
+	}
+
+	.grid-container {
+		@include grid(center, space-between);
+		grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+		grid-column-gap: $space-7;
+		grid-row-gap: $space-8;
+
+		@include laptop-small {
+			grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+			grid-column-gap: $space-6;
+			grid-row-gap: $space-8;
+		}
+
+		.grid-item {
+			width: 100%;
+		}
+	}
+}
