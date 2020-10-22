@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./topnav.scss";
 import brandIcon from "../../assets/images/brand/brand.svg";
 import jade from "../../assets/images/jade.jpg";
 
 const TopNav = (props) => {
+	let [inputState, setInputState] = useState(() => ({ text: "" }));
+
+	const handleFormInput = (inputValue) => {
+		setInputState(() => ({
+			text: inputValue,
+		}));
+	};
+
 	return (
 		<nav className="topnav">
 			<div className="brand-ham">
@@ -14,17 +22,24 @@ const TopNav = (props) => {
 				>
 					<span className="las la-bars icon-large"></span>
 				</button>
-				<Link to="/" className="brand">
+				<Link to="/inferno" className="brand">
 					<img src={brandIcon} alt="logo" className="brand-image" />
 				</Link>
 			</div>
 
-			<form className={`${props.searchformState} nav-form`}>
+			<form
+				action={`${props.defaultPath}/search/${inputState.text}`}
+				className={`${props.searchformState} nav-form`}
+			>
 				<div className="form-control">
 					<input
-						type="text"
+						type="search"
 						className="nav-search-input"
 						placeholder="search"
+						value={inputState.text}
+						onChange={(changeEvent) => {
+							handleFormInput(changeEvent.target.value);
+						}}
 					/>
 					<button type="submit" className="nav-submit form-icon-button">
 						<span className="las la-search"></span>

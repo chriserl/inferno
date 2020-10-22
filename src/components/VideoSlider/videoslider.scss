@@ -13,8 +13,7 @@
 			@include flex;
 
 			.title {
-				@include plb;
-				margin-left: $space-2;
+				@include phb;
 				color: $text-black;
 			}
 		}

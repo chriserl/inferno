@@ -4,6 +4,7 @@ import Utils from "../../utils";
 
 const VideoCard = (props) => {
 	let utilities = new Utils();
+	console.log(props.video);
 	if (props.video) {
 		return (
 			<div className="video-card">
@@ -26,11 +27,14 @@ const VideoCard = (props) => {
 							<div className="views">
 								<span className="las la-eye"></span>
 								<p className="views-count">
-									{utilities.statisticCount(props.video.viewCount)}
+									{props.video.viewCount &&
+										utilities.statisticCount(props.video.viewCount)}
 								</p>
 							</div>
 							<div className="likes">
-								<p className="video-age">{props.video.date.slice(0, 10)}</p>
+								<p className="video-age">
+									{props.video.date && utilities.formatDate(props.video.date)}
+								</p>
 							</div>
 						</div>
 					</div>

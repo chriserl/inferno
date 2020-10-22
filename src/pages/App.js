@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "./app.scss";
 import Topnav from "../components/Topnav/Topnav";
 import Bottomnav from "../components/Bottomnav/Bottomnav";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Home from "../views/Home/Home";
 import Trending from "../views/Trending/Trending";
 import Subscriptions from "../views/Subscriptions/Subscriptions";
-import "./app.scss";
+import Search from "../views/Search/Search";
 
 const App = (props) => {
 	let [layoutState, setLayoutState] = useState(() => ({
@@ -31,7 +32,7 @@ const App = (props) => {
 		);
 	};
 
-	const handleSearchToggle = () => {
+	const handleSearchToggle = (inputValue) => {
 		setLayoutState(() =>
 			layoutState.searchformState === "search-open"
 				? {
@@ -52,6 +53,7 @@ const App = (props) => {
 					searchformState={layoutState.searchformState}
 					toggleSidebar={() => handleMainState()}
 					toggleSearch={() => handleSearchToggle()}
+					defaultPath={props.match.url}
 				/>
 				<Sidebar
 					sidebarState={layoutState.sidebarState}
@@ -62,6 +64,10 @@ const App = (props) => {
 				<main className={layoutState.mainState}>
 					<Switch>
 						<Route exact path={`${props.match.url}`} component={Home}></Route>
+						<Route
+							path={`${props.match.url}/search/:searchParam`}
+							component={Search}
+						></Route>
 						<Route
 							path={`${props.match.url}/trending`}
 							component={Trending}

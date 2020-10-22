@@ -25,6 +25,10 @@ export default function Utils() {
 		return longString.length > 26 ? formatString(longString, 26) : longString;
 	};
 
+	this.formatDate = function (date) {
+		return date.slice(0, 10);
+	};
+
 	this.destructureVideoItem = (videoItem) => {
 		return {
 			channelName: videoItem.snippet.channelTitle,
@@ -34,6 +38,16 @@ export default function Utils() {
 			title: videoItem.snippet.title,
 			date: videoItem.snippet.publishedAt,
 			viewCount: videoItem.statistics.viewCount,
+		};
+	};
+
+	this.destructureSearchItem = (videoItem) => {
+		return {
+			channelName: videoItem.snippet.channelTitle,
+			thumbnail: videoItem.snippet.thumbnails.maxres
+				? videoItem.snippet.thumbnails.maxres.url
+				: videoItem.snippet.thumbnails.high.url,
+			title: videoItem.snippet.title,
 		};
 	};
 }

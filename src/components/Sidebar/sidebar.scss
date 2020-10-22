@@ -23,40 +23,24 @@
 	scrollbar-width: 6px;
 	@include scroll-hide;
 	transition: all 0.25s ease;
+	padding-top: $space-2;
 
 	.hide-sidebar {
 		width: max-content;
 		align-self: flex-end;
 		margin-right: $space-1;
+		margin-bottom: -4.4rem;
 	}
 
 	hr {
-		opacity: 0.4;
-		width: 80%;
+		opacity: 0.3;
+		width: 72%;
 		margin: $space-4 auto;
-	}
-
-	.profile {
-		width: max-content;
-		margin: 0 auto;
-		@include flex(column, center);
-		padding: 0 $space-2 0 $space-3;
-
-		.profile-image {
-			width: 5.6rem;
-			border-radius: 50%;
-			margin-bottom: $space-3;
-		}
-
-		.profile-name {
-			@include ps;
-			color: $text-black;
-		}
 	}
 
 	.view-links {
 		width: 80%;
-		margin: 0 auto 0 $space-3;
+		margin: 0 auto 0 $space-2;
 		padding: 0 $space-2 0 $space-3;
 
 		.link-item {
@@ -86,27 +70,5 @@
 
 	.app-links {
 		margin-top: $space-6;
-	}
-
-	.subscriptions {
-		width: 96%;
-		margin: 0 auto;
-		margin-top: $space-8;
-		@include grid($justify: space-between);
-		grid-template-columns: repeat(auto-fit, minmax(1.6rem, 1fr));
-		grid-gap: $space-2;
-
-		.channel-image-container {
-			width: 100%;
-
-			.channel-image {
-				width: 100%;
-				border-radius: 50%;
-			}
-		}
-	}
-
-	.utility-links {
-		margin-top: $space-2;
 	}
 }

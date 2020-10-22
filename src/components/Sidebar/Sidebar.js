@@ -1,77 +1,44 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./sidebar.scss";
-import profileImage from "../../assets/images/jade.jpg";
 
 const UserLinks = (props) => {
+	let mainLinks = [
+		{
+			linkName: "Home",
+			linkRoute: "",
+			linkIcon: "home",
+		},
+		{
+			linkName: "Trending",
+			linkRoute: "trending",
+			linkIcon: "broadcast-tower",
+		},
+		{
+			linkName: "Subscriptions",
+			linkRoute: "subscriptions",
+			linkIcon: "folder",
+		},
+	];
 	return (
 		<div className="view-links app-links">
 			<ul className="links">
-				<li className="link-item">
-					<NavLink
-						to={props.defaultPath}
-						className="view-link"
-						activeClassName="active-view-link"
-					>
-						<span className="las la-home icon-regular link-icon"></span>
-						<p className="link-text">Home</p>
-					</NavLink>
-				</li>
-				<li className="link-item">
-					<NavLink
-						to={`${props.defaultPath}/trending`}
-						className="view-link"
-						activeClassName="active-view-link"
-					>
-						<span className="las la-broadcast-tower icon-regular link-icon"></span>
-						<p className="link-text">Trending</p>
-					</NavLink>
-				</li>
-				<li className="link-item">
-					<NavLink
-						to={`${props.defaultPath}/subscriptions`}
-						className="view-link"
-						activeClassName="active-view-link"
-					>
-						<span className="las la-folder icon-regular link-icon"></span>
-						<p className="link-text">Subscriptions</p>
-					</NavLink>
-				</li>
+				{mainLinks.map((linkItem) => (
+					<li className="link-item" key={linkItem.linkRoute}>
+						<NavLink
+							exact
+							activeClassName="active-view-link"
+							to={`${props.defaultPath}/${linkItem.linkRoute}`}
+							className="view-link"
+						>
+							<span
+								className={`las la-${linkItem.linkIcon} icon-regular link-icon`}
+							></span>
+							<p className="link-text">{linkItem.linkName}</p>
+						</NavLink>
+					</li>
+				))}
 			</ul>
-		</div>
-	);
-};
-
-const Subscriptions = () => {
-	return (
-		<div className="subscriptions">
-			<div className="channel-image-container">
-				<img src={profileImage} alt="channel" className="channel-image" />
-			</div>
-			<div className="channel-image-container">
-				<img src={profileImage} alt="channel" className="channel-image" />
-			</div>
-			<div className="channel-image-container">
-				<img src={profileImage} alt="channel" className="channel-image" />
-			</div>
-			<div className="channel-image-container">
-				<img src={profileImage} alt="channel" className="channel-image" />
-			</div>
-			<div className="channel-image-container">
-				<img src={profileImage} alt="channel" className="channel-image" />
-			</div>
-			<div className="channel-image-container">
-				<img src={profileImage} alt="channel" className="channel-image" />
-			</div>
-			<div className="channel-image-container">
-				<img src={profileImage} alt="channel" className="channel-image" />
-			</div>
-			<div className="channel-image-container">
-				<img src={profileImage} alt="channel" className="channel-image" />
-			</div>
-			<div className="channel-image-container">
-				<img src={profileImage} alt="channel" className="channel-image" />
-			</div>
 		</div>
 	);
 };
@@ -85,25 +52,11 @@ const Sidebar = (props) => {
 			>
 				<span className="las la-angle-double-left icon-regular"></span>
 			</button>
-			<div className="profile">
-				<img src={profileImage} alt="jade" className="profile-image" />
-				<p className="profile-name">Unjaded Jade</p>
-			</div>
 			<UserLinks defaultPath={props.defaultPath} />
 			<hr />
 
 			<div className="view-links user-links">
 				<ul className="links">
-					<li className="link-item">
-						<NavLink
-							to={`${props.defaultPath}/history`}
-							className="view-link"
-							activeClassName="active-view-link"
-						>
-							<span className="las la-check-double icon-regular link-icon"></span>
-							<p className="link-text">History</p>
-						</NavLink>
-					</li>
 					<li className="link-item">
 						<NavLink
 							to={`${props.defaultPath}/saved`}
@@ -112,45 +65,6 @@ const Sidebar = (props) => {
 						>
 							<span className="las la-bookmark icon-regular link-icon"></span>
 							<p className="link-text">Saved</p>
-						</NavLink>
-					</li>
-					<li className="link-item">
-						<NavLink
-							to={`${props.defaultPath}/liked`}
-							className="view-link"
-							activeClassName="active-view-link"
-						>
-							<span className="las la-thumbs-up icon-regular link-icon"></span>
-							<p className="link-text">Liked</p>
-						</NavLink>
-					</li>
-				</ul>
-			</div>
-
-			<Subscriptions />
-
-			<hr />
-
-			<div className="view-links utility-links">
-				<ul className="links">
-					<li className="link-item">
-						<NavLink
-							to="/"
-							className="view-link"
-							activeClassName="active-view-link"
-						>
-							<span className="las la-cog icon-regular link-icon"></span>
-							<p className="link-text">Settings</p>
-						</NavLink>
-					</li>
-					<li className="link-item">
-						<NavLink
-							to="/"
-							className="view-link"
-							activeClassName="active-view-link"
-						>
-							<span className="las la-arrow-circle-left icon-regular link-icon"></span>
-							<p className="link-text">Logout</p>
 						</NavLink>
 					</li>
 				</ul>

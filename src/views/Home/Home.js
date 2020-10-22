@@ -13,15 +13,18 @@ const Home = () => {
 			.getVideos("mostPopular", "US", "50")
 			.then((apiResponse) => apiResponse.json())
 			.then((youtubeData) => {
-				setvideoItems(() => ({
-					slidingVideos: youtubeData.items
-						.slice(0, 10)
-						.map((item) => utilities.destructureVideoItem(item)),
-					recommendedVideos: youtubeData.items
-						.slice(10)
-						.map((item) => utilities.destructureVideoItem(item)),
-				}));
-			});
+				if (youtubeData.items > 1) {
+					setvideoItems(() => ({
+						slidingVideos: youtubeData.items
+							.slice(0, 10)
+							.map((item) => utilities.destructureVideoItem(item)),
+						recommendedVideos: youtubeData.items
+							.slice(10)
+							.map((item) => utilities.destructureVideoItem(item)),
+					}));
+				}
+			})
+			.catch((error) => console.log(error));
 	}, []);
 
 	let [videoItems, setvideoItems] = useState(() => ({
@@ -32,10 +35,7 @@ const Home = () => {
 	return (
 		<div className="home">
 			<div className="subscriptions-slider">
-				<VideoSlider
-					videos={videoItems.slidingVideos}
-					channelName="Subscriptions"
-				/>
+				<VideoSlider videos={videoItems.slidingVideos} channelName="Trending" />
 			</div>
 			<VideoGrid
 				videos={videoItems.recommendedVideos}

@@ -9,11 +9,6 @@ const VideoSlider = (props) => {
 			<div className="video-slider">
 				<div className="slider-header">
 					<div className="slider-title">
-						<img
-							src={vid4}
-							alt="channel"
-							className="channel-image image-icon"
-						/>
 						<p className="title">{props.channelName}</p>
 					</div>
 					<div className="slider-extra">
