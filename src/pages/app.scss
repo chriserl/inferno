@@ -2,14 +2,19 @@
 @import "../sass/utilities";
 
 .app {
-	width: max-content;
-	height: max-content;
+	width: 100vw;
+	height: 100vh;
 	background: hsl(220, 13%, 99%);
 	overflow-x: hidden;
 	margin: 0;
 
+	main {
+		height: max-content;
+	}
+
 	@include tab-screen {
 		.main-contained {
+			width: calc(100vw - 14rem);
 			margin-left: 14rem;
 		}
 	}

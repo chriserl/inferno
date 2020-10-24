@@ -13,7 +13,7 @@ const Home = () => {
 			.getVideos("mostPopular", "US", "50")
 			.then((apiResponse) => apiResponse.json())
 			.then((youtubeData) => {
-				if (youtubeData.items > 1) {
+				if (youtubeData.items.length > 1) {
 					setvideoItems(() => ({
 						slidingVideos: youtubeData.items
 							.slice(0, 10)
@@ -24,7 +24,7 @@ const Home = () => {
 					}));
 				}
 			})
-			.catch((error) => console.log(error));
+			.catch((error) => console.error(error));
 	}, []);
 
 	let [videoItems, setvideoItems] = useState(() => ({

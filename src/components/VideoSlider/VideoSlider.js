@@ -1,6 +1,5 @@
 import React from "react";
 import "./videoslider.scss";
-import vid4 from "../../assets/images/videos/vid4.png";
 import VideoCard from "../VideoCard/VideoCard";
 
 const VideoSlider = (props) => {

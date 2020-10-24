@@ -4,7 +4,6 @@ import Utils from "../../utils";
 
 const VideoCard = (props) => {
 	let utilities = new Utils();
-	console.log(props.video);
 	if (props.video) {
 		return (
 			<div className="video-card">

@@ -12,7 +12,7 @@ const Trending = () => {
 			.getVideos("mostPopular", "US", "50")
 			.then((apiResponse) => apiResponse.json())
 			.then((youtubeData) => {
-				if (youtubeData.items > 1) {
+				if (youtubeData.items.length > 1) {
 					setvideoItems(() => ({
 						gridVideos: youtubeData.items.map((item) =>
 							utilities.destructureVideoItem(item)
@@ -20,7 +20,7 @@ const Trending = () => {
 					}));
 				}
 			})
-			.catch((error) => console.log(error));
+			.catch((error) => console.error(error));
 	}, []);
 
 	let [videoItems, setvideoItems] = useState(() => ({
